@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        input{
+            width: 80%;
+            margin-bottom: 15px;
+            }
+    </style>
+</head>
+<body>
+    <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="reg">Регистрация</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Закрыть">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+	  <div class="modal-body">
+          <body style="background: url(https://storebox.com.ua/data/shop/16625462325cbac6924c0fe.jpg);">
+	<form method="POST">{% csrf_token %}
+
+		<p style="margin-bottom: 5px;">Ник в PUBGM капитана команды</p>
+        <div class="form">{{ form.username1 }}</div>
+        <p style="margin-bottom: 5px;">Ник в PUBGM второго члена команды</p>
+        <div class="form">{{ form.username2 }}</div>
+        <p style="margin-bottom: 5px;">Ник в PUBGM третьего члена команды</p>
+        <div class="form">{{ form.username3 }}</div>
+        <p style="margin-bottom: 5px;">Ник в PUBGM четвёртого члена команды</p>
+        <div class="form">{{ form.username4 }}</div>
+
+	  <center>
+	  <input class="btn btn-danger" type="submit" name="enter" value="Зарегистрироваться" style="margin-bottom: 0px;">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal"><a href="{% url 'main_list' %}" style="text-decoration: none;"><font color="white">Закрыть</font></a></button>
+        </center>
+      </div>
+	  </form>
+
+    </div>
+  </div>
+</div>
+</body>
+</html>
