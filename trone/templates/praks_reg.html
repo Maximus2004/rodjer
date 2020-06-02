@@ -30,6 +30,10 @@
           <body style="background: url(https://storebox.com.ua/data/shop/16625462325cbac6924c0fe.jpg);">
 	<form method="POST">{% csrf_token %}
         <p>Перед регистрацией, прочитайте<a href="{% url 'info_praks' %}"> правила праков</a></p>
+        <hr>
+        <p style="margin-bottom: 5px;">Название команды</p>
+        <div class="form">{{ form.name }}</div>
+        <hr>
 		<p style="margin-bottom: 5px;">Ник капитана команды в PUBGM</p>
         <div class="form">{{ form.username1 }}</div>
         <p style="margin-bottom: 5px;">Ссылка на VK капитана команды</p>
@@ -37,18 +41,17 @@
         <hr>
         <p style="margin-bottom: 5px;">Ник второго члена команды</p>
         <div class="form">{{ form.username2 }}</div>
-        <hr>
         <p style="margin-bottom: 5px;">Ник третьего члена команды</p>
         <div class="form">{{ form.username3 }}</div>
-        <hr>
         <p style="margin-bottom: 5px;">Ник четвёртого члена команды</p>
         <div class="form">{{ form.username4 }}</div>
+        <hr>
         <input type="checkbox" name="option2" value="a2" style="
     width: 20px;
     height: 20px;
     margin-bottom: 0px;
     margin-right: 10px;">Все члены моей команды вступили <a href="https://discord.gg/YDb9xx"><font color="#3a75c4">на сервер в дискорде</font></a><Br>
-
+    <hr>
 	  <center style="margin-top: 10px;">
 	  <input class="btn btn-danger" type="submit" name="enter" value="Зарегистрироваться" style="margin-bottom: 0px;">
           <button type="button" class="btn btn-secondary" data-dismiss="modal"><a href="{% url 'main_list' %}" style="text-decoration: none;"><font color="white">Закрыть</font></a></button>
