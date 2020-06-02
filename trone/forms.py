@@ -11,7 +11,7 @@ class DuoForm(forms.ModelForm):
 class PraksForm(forms.ModelForm):
     class Meta:
         model = PraksReg
-        fields = ('username1', 'vk1', 'username2', 'vk2', 'username3', 'vk3', 'username4', 'vk4',)
+        fields = ('username1', 'vk1', 'username2', 'username3', 'username4',)
 
 
 class SquadsForm(forms.ModelForm):

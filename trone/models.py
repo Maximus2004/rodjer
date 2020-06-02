@@ -23,11 +23,8 @@ class PraksReg(models.Model):
     username1 = models.CharField(max_length=50, default='')  # ограниченый размер переменной
     vk1 = models.CharField(max_length=50, default='')
     username2 = models.CharField(max_length=50, default='')
-    vk2 = models.CharField(max_length=50, default='')
     username3 = models.CharField(max_length=50, default='')
-    vk3 = models.CharField(max_length=50, default='')
     username4 = models.CharField(max_length=50, default='')
-    vk4 = models.CharField(max_length=50, default='')
 
     def __str__(self):
         return self.username1
