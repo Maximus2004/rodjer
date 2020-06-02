@@ -21,6 +21,8 @@ class SquadsReg(models.Model):
 
 class PraksReg(models.Model):
     name = models.CharField(max_length=50, default='')
+    reserv1 = models.CharField(max_length=50, default='', blank=True)
+    reserv2 = models.CharField(max_length=50, default='', blank=True)
     username1 = models.CharField(max_length=50, default='')  # ограниченый размер переменной
     vk1 = models.CharField(max_length=50, default='')
     username2 = models.CharField(max_length=50, default='')
