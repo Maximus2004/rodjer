@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from trone.forms import EasyForm, EasyForm2, PayForm
+from trone.forms import DuoForm, PraksForm, SquadsForm
 
 
 def main_list(request):
@@ -10,49 +10,59 @@ def past_list(request):
     return render(request, 'past.html')
 
 
+# как работает оплата турнирв
 def how_works(request):
     return render(request, 'how_works.html')
 
 
+# информация по пракам
+def info_praks(request):
+    return render(request, 'praks.html')
+
+
+# успешное прохождение регистрации на праки
+def success_praks(request):
+    return render(request, 'success_praks.html')
+
+
+# успешное прохождение регистрации на бесплатный турик
 def success(request):
     return render(request, 'success.html')
 
 
-def success_pay(request):
-    return render(request, 'success_pay.html')
-
-
-def easy_reg(request):
+# регистрация сквада на праки
+def reg_praks(request):
     if request.method == "POST":
-        form = EasyForm(request.POST)
+        form = PraksForm(request.POST)
         if form.is_valid():
             user = form.save(commit=False)
             user.save()
+            return redirect('success_praks')
+    else:
+        form = PraksForm()
+    return render(request, 'praks_reg.html', {'form': form})
+
+
+# регистрация сквадов на бесплатный турнир
+def squads_reg(request):
+    if request.method == "POST":
+        form = SquadsForm(request.POST)
+        if form.is_valid():
+            squad = form.save(commit=False)
+            squad.save()
             return redirect('success')
     else:
-        form = EasyForm()
-    return render(request, 'easy_reg.html', {'form': form})
+        form = SquadsForm()
+    return render(request, 'reg_squads.html', {'form': form})
 
 
-def easy_reg2(request):
+def duo_reg(request):
     if request.method == "POST":
-        form = EasyForm2(request.POST)
+        form = DuoForm(request.POST)
         if form.is_valid():
-            user = form.save(commit=False)
-            user.save()
+            duo = form.save(commit=False)
+            duo.save()
             return redirect('success')
     else:
-        form = EasyForm2()
-    return render(request, 'easy_reg2.html', {'form': form})
-
-
-def pay(request):
-    if request.method == "POST":
-        form = PayForm(request.POST)
-        if form.is_valid():
-            user = form.save(commit=False)
-            user.save()
-            return redirect('success_pay')
-    else:
-        form = PayForm()
-    return render(request, 'payment.html', {'form': form})
+        form = DuoForm()
+    return render(request, 'reg_duo.html', {'form': form})

@@ -1,16 +1,22 @@
 from django import forms
-from .models import EasyReg, EasyReg2, Pay
+from .models import DuoReg, PraksReg, Pay, SquadsReg
 
 
-class EasyForm(forms.ModelForm):
+class DuoForm(forms.ModelForm):
     class Meta:
-        model = EasyReg
+        model = DuoReg
         fields = ('username1', 'username2',)
 
 
-class EasyForm2(forms.ModelForm):
+class PraksForm(forms.ModelForm):
     class Meta:
-        model = EasyReg2
+        model = PraksReg
+        fields = ('username1', 'vk1', 'username2', 'vk2', 'username3', 'vk3', 'username4', 'vk4',)
+
+
+class SquadsForm(forms.ModelForm):
+    class Meta:
+        model = SquadsReg
         fields = ('username1', 'username2', 'username3', 'username4',)
 
 

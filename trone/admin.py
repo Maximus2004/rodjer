@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import EasyReg, EasyReg2, Pay
+from .models import PraksReg, SquadsReg, DuoReg
 
-admin.site.register(EasyReg)
-admin.site.register(EasyReg2)
-admin.site.register(Pay)
+admin.site.register(SquadsReg)
+admin.site.register(PraksReg)
+admin.site.register(DuoReg)

@@ -5,11 +5,15 @@ from trone.views import *
 
 urlpatterns = (
     path('', main_list, name='main_list'),
-    path('reg/free/', easy_reg, name='easy_reg'),
-    path('tourn/past/', past_list, name='past_list'),
-    path('reg/free2/', easy_reg2, name='easy_reg2'),
+    path('past/', past_list, name='past_list'),
+
+    path('reg/squads/', squads_reg, name='squads_reg'),
+    path('reg/praks/', reg_praks, name='reg_praks'),
+    path('reg/duo/', duo_reg, name='duo_reg'),
+
     path('faq/', how_works, name='how_works'),
-    path('reg/pay/', pay, name='pay'),
+    path('faq/praks/', info_praks, name='info_praks'),
+
     path('success/', success, name='success'),
-    path('pay/success/', success_pay, name='success_pay'),
+    path('success/praks/', success_praks, name='success_praks'),
 )

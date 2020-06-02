@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Расписание на неделю</title>
+    <title>Праки</title>
     <style>
         * {
         font-family: "arial";
@@ -54,7 +54,7 @@
         padding-right: 40px;
         margin: 50px auto;
         background: rgba(22, 26, 29, 0.801);
-        width: 75%;
+        width: 65%;
         color: rgba(255, 255, 255, 0.952);
         font: normal 20px arial;
         border: 2px solid #b4b2b2;
@@ -64,7 +64,7 @@
         }
         .content:hover{
         box-shadow: 0 0 20px rgb(221, 132, 73);
-        width: 75%;
+        width: 65%;
 
         }
 
@@ -77,7 +77,7 @@
         height: 40px;
         text-decoration: none;
         padding-top: 7px;
-        color: #f8f8f8e0;
+        color: #00000000;
         text-align: center;
         line-height: 15px;
         display: block;
@@ -271,13 +271,6 @@
         font-size: 1.3rem;
         }
 
-        .kadvanta-gesotavin .dsatnem a {
-        color: #6b8bbb;
-        }
-
-        .kadvanta-gesotavin .dsatnem a:hover {
-        color: #053656;
-        }
         table {
         position: absolute;
         display: flex;
@@ -426,147 +419,60 @@
         transform-origin: center center;
         transform: rotate(70deg);
         }
-        .description{
-        width: 30%;
-        }
     </style>
 </head>
 <body>
     <nav>
         <a class="nav-button" href="{% url 'main_list' %}">Турниры на неделю</a>
-        <div class="logo"><a href='/'>rodjertour</a></div>
+                <div class="logo"><a href='/'>rodjertour</a></div>
+
         <a class="nav-button" href="{% url 'past_list' %}">Прошедшие турниры</a>
     </nav>
-
-    <h1 style="padding-top: 21px;
-               padding-left: 11px;">Вторник</h1>
     <div class="content">
         <div id="wrapper">
-            <main style='font-size:20px; font-weight:100; font-family: arial; line-height: 1.5;'><br>📅 2 июня в 18:30<br>🗾 Эрангель<br>‍👨‍👨‍ Дуо<br>👨 3-е лицо<br>💵 ВХОД: бесплатно</main>
             <div id="title">
                 <h1 style="
+                    padding-top: 11px;
                     padding-left: 11px;
-                    padding-top: 10px;
-                ">Денежный приз</h1>
+                ">Праки PUBGM</h1>
             </div>
             <div id="description" style="
                 padding-left: 11px;
-                padding-top: 10px;
-                padding-bottom: 11px;
             ">
-                <p style='font-size:20px ; font-weight:100; font-family: arial; line-height: 1.5;'>
-                    🏆 За ТОП-1 будет гарантироаванный приз, но сумма - секрет 🏆
-                </p>
-            </div>
-        </div>
-        <a class="buttons" href="{% url 'duo_reg' %}" style="margin-top: 0px;">Записаться</a>
-    </div>
-
-    <h1 style="padding-top: 21px;
-               padding-left: 11px;">Среда</h1>
-    <div class="content">
-        <div id="wrapper">
-            <main style='font-size:20px; font-weight:100; font-family: arial; line-height: 1.5;'><br>📅 3 июня в 18:30<br>🗾 Эрангель<br>‍👨‍👨‍👩‍👨 Сквады<br>👨 3-е лицо<br>💵 ВХОД: бесплатно</main>
-            <div id="title">
-                <h1 style="
-                    padding-left: 11px;
-                    padding-top: 10px;
-                ">Фановая кастомка</h1>
-            </div>
-            <div id="description" style="
-                padding-left: 11px;
-                padding-top: 10px;
-                padding-bottom: 11px;
-            ">
-                <p style='font-size:20px ; font-weight:100; font-family: arial; line-height: 1.5;'>
-                    🏆 Приза нет 🏆
-                    <br>Давайтенаберём сотку в лобби :^)
-                </p>
-            </div>
-        </div>
-        <a class="buttons" href="{% url 'squads_reg' %}" style="margin-top: 0px;">Записаться</a>
-    </div>
-
-    <h1 style="padding-top: 21px;
-               padding-left: 11px;">Четверг</h1>
-    <div class="content">
-        <div id="wrapper">
-            <main style='font-size:20px; font-weight:100; font-family: arial; line-height: 1.5;'><br>📅 4 июня в 18:30<br>🗾 Санук<br>‍👨‍👨‍👩‍👨 Сквады<br>👨 3-е лицо<br>💵 ВХОД: бесплатно</main>
-            <div id="title">
-                <h1 style="
-                    padding-left: 11px;
-                    padding-top: 10px;
-                ">Денежнымй приз</h1>
-            </div>
-            <div id="description" style="
-                padding-left: 11px;
-                padding-top: 10px;
-                padding-bottom: 11px;
-            ">
-                <p style='font-size:20px ; font-weight:100; font-family: arial; line-height: 1.5;'>
-                    🏆 За ТОП-1 🏆
-                    <br>🥇 Скваду 140 рублей
-                    <br>🥈 Дуо 70 рублей
-                    <br>🥉 Соло 25 рублей
-                    <br>Приходи с командой и заработай больше! :)
-                </p>
-            </div>
-        </div>
-        <a class="buttons" href="{% url 'squads_reg' %}" style="margin-top: 0px;">Записаться</a>
-    </div>
-
-    <h1 style="padding-top: 21px;
-               padding-left: 11px;">Пятница</h1>
-    <div class="content">
-        <div id="wrapper">
-            <main style='font-size:20px; font-weight:100; font-family: arial; line-height: 1.5;'><br>📅 5 июня в 18:30<br>🗾 Санук<br>‍👨‍👨‍👩‍👨 Сквады<br>👨 3-е лицо<br>💵 ВХОД: бесплатно</main>
-            <div id="title">
-                <h1 style="
-                    padding-left: 11px;
-                    padding-top: 10px;
-                ">Фановая кастомка</h1>
-            </div>
-            <div id="description" style="
-                padding-left: 11px;
-                padding-top: 10px;
-                padding-bottom: 11px;
-            ">
-                <p style='font-size:20px ; font-weight:100; font-family: arial; line-height: 1.5;'>
-                    🏆 Нового Года не будет, так же как и приза 🏆
-                    <br>Ждём всех! :)
-                </p>
-            </div>
-        </div>
-        <a class="buttons" href="{% url 'squads_reg' %}" style="margin-top: 0px;">Записаться</a>
-    </div>
-
-    <h1 style="padding-top: 21px;
-               padding-left: 11px;">Суббота</h1>
-    <div class="content">
-        <div id="wrapper">
-            <main style='font-size:20px; font-weight:100; font-family: arial; line-height: 1.5;'><br>📅 6 июня<br>👩 ‍Соло<br>👨 3-е лицо<br>💵 ВХОД: бесплатно</main>
-            <div id="title">
-                <h1 style="
-                    padding-left: 11px;
-                    padding-top: 10px;
-                "><a href="{% url 'info_praks' %}">Праки</a></h1>
-            </div>
-            <div id="description" style="
-                padding-left: 11px;
-                padding-top: 10px;
-                padding-bottom: 11px;
-            ">
-                <p style='font-size:20px ; font-weight:100; font-family: arial; line-height: 1.5;'>
-                    Кликните ☝ на название ☝, чтобы получить подробную инфорацию
-                    <br>Турнир будет проходить 1 день.
-                    <br>Будет проведено 3 игры.
+                <p style='font-size:20px ; font-weight:100; font-family: arial; line-height: 1.5; padding-top: 0px;'>
+                    <br>Праки будут проходить 📅 6 июня 📅.
+                    <br>
+                    <br>Будет проведено 3 игры:
+                    <br>Первая игра: 18:00 - Эрангель
+                    <br>Вторая игра: 19:00 - Мирамар
+                    <br>Третья игра: 20:00 - Санук
+                    <br>
                     <br>🥇 ТОП-1  200 рублей
                     <br>🥈 ТОП-2  100 рублей
+                    <br>
+                    <br>Участвует 20 команд основы, без резерва:
+                    <br>1 место –     500 очков
+                    <br>2 место –     365 очков
+                    <br>3 место –     315 очков
+                    <br>4 место –     280 очков
+                    <br>5 место –     250 очков
+                    <br>6 место –     225 очков
+                    <br>7 место –     200 очков
+                    <br>8 место –     180 очков
+                    <br>9 место –     160 очков
+                    <br>10 место –    145 очков
+                    <br>11-12 места –  130 очков
+                    <br>13-15 места – 115 очков
+                    <br>16-20 места – 100 очков
+                    <br>Килл –        15 очков
+                    <br>
+                    <br>Вся актуальная информация будет <a href="https://discord.gg/YDb9xx"><font color="#3a75c4">на сервере в дискорде</font></a>. Всем обязательно туда вступить!
+                    <br>
+                    <br>Всё ещё есть вопросы? Тогда пиши <a href="https://vk.com/im?media=&sel=-193069976"><font color="#3a75c4">сюда!</font></a>
                 </p>
             </div>
         </div>
-        <a class="buttons" href="{% url 'reg_praks' %}" style="margin-top: 0px;">Записаться</a>
+        <a class="buttons" href="{% url 'reg_praks' %}" style="margin-top: 30px;">Записаться</a>
     </div>
-
 </body>
 </html>
